@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useLocalStorage } from '../hooks/useLocalStorage';
+
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -6,6 +8,7 @@ const Navbar = () => {
     e.preventDefault();
     setDarkMode(!darkMode);
   };
+
   return (
     <nav className="navbar">
       <h1>Crypto Tracker</h1>
